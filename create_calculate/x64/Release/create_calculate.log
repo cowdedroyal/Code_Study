@@ -1,0 +1,5 @@
+﻿  create_calculate.cpp
+C:\Users\18702\Desktop\fish c\蓝桥杯冲冲冲\create_calculate\create_calculate.cpp(57,6): error C2374: “count”: 重定义；多次初始化
+C:\Users\18702\Desktop\fish c\蓝桥杯冲冲冲\create_calculate\create_calculate.cpp(22): message : 参见“count”的声明
+C:\Users\18702\Desktop\fish c\蓝桥杯冲冲冲\create_calculate\create_calculate.cpp(104,8): warning C4552: ”<“: 未使用表达式结果
+  main.cpp
