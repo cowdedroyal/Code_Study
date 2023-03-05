@@ -1,4 +1,2 @@
 # Code_Study
-it's a code repository  
-
-we are using the same code repository.
+it's a code reposity for C++, java, and C++.
