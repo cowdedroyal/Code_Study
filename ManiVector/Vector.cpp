@@ -24,7 +24,7 @@ Vector Vector::Add(const Vector& ob2)
 	x = x + ob2.x;
 	y = y + ob2.y;
 	//return Vector();
-	return *this; //采用这个方式可以连续调用
+	return *this;//为什么用*this //采用这个方式可以连续调用
 }
 
 Vector Vector::Sub(const Vector& ob2)
