@@ -8,7 +8,7 @@ int main() {
 	cc.calculate();
 	thread t2(&create_calculate::correct,&cc);
 	t2.detach();
-	thread t1(&create_calculate::Clock::timing,&ct);
+	thread t1(&create_calculate::Clock::timing,&ct); //因为是嵌套的类所以有两::
 	t1.join();
 	return 0; //返回
 }
