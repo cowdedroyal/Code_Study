@@ -31,7 +31,7 @@ Vector Vector::Sub(const Vector& ob2)
 {
 	x = x - ob2.x;
 	y = y - ob2.y;
-	return Vector();//无名对象，有什么作用？为什么不能连续调用
+	return Vector();//无名对象，有什么作用？
 }
 
 int Vector::Mult(const Vector& ob2)
