@@ -31,7 +31,7 @@ Vector Vector::Sub(const Vector& ob2)
 {
 	x = x - ob2.x;
 	y = y - ob2.y;
-	return Vector();//无名对象，有什么作用？
+	return Vector();//#无名对象，有什么作用？@cowdedroyal 
 }
 
 int Vector::Mult(const Vector& ob2)
