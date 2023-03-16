@@ -24,7 +24,7 @@ public:
 	~CStudent();
 	int getdata(int number);
 	void SetData();
-	void SetNum(int Nu); //ÉèÖÃÅÅÃû
+	void SetNum(int Nu); //è®¾ç½®æ’å
 	void SetData(char* No1, char* Name1, int Ch, int Ma, int En);
 	void Display();
 	float Average();
