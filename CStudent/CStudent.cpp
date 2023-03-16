@@ -27,8 +27,8 @@ CStudent::~CStudent()
 }
 
 /*
-* @brief µÃµ½Êı×éË½ÓĞ³ÉÔ±µÄÖµ
-* @param 0ÊÇÓïÎÄ³É¼¨£¬1ÊÇÊıÑ§³É¼¨£¬2ÊÇÓ¢Óï³É¼¨£¬3ÊÇÅÅÃû
+* @brief å¾—åˆ°æ•°ç»„ç§æœ‰æˆå‘˜çš„å€¼
+* @param 0æ˜¯è¯­æ–‡æˆç»©ï¼Œ1æ˜¯æ•°å­¦æˆç»©ï¼Œ2æ˜¯è‹±è¯­æˆç»©ï¼Œ3æ˜¯æ’å
 */
 int CStudent::getdata(int number)
 {
@@ -44,16 +44,16 @@ int CStudent::getdata(int number)
 void CStudent::SetData()
 {
 	if (No[0] == NULL && Name[0] == NULL) {
-		cout << "ÇëÊäÈëÑ§ÉúµÄÑ§ºÅĞÕÃû(¿Õ¸ñ·Ö¿ª)£º";
+		cout << "è¯·è¾“å…¥å­¦ç”Ÿçš„å­¦å·å§“å(ç©ºæ ¼åˆ†å¼€)ï¼š";
 		cin >> No;
 		cin >> Name;
 	}
-	cout << "ÇëÊäÈëÑ§ºÅÎª" << No << Name << "Í¬Ñ§µÄ³É¼¨" << endl;
-	cout << "ÓïÎÄ³É¼¨£º";
+	cout << "è¯·è¾“å…¥å­¦å·ä¸º" << No << Name << "åŒå­¦çš„æˆç»©" << endl;
+	cout << "è¯­æ–‡æˆç»©ï¼š";
 	cin >> DegChinese;
-	cout << "ÊıÑ§³É¼¨£º";
+	cout << "æ•°å­¦æˆç»©ï¼š";
 	cin >> DegMaths;
-	cout << "Ó¢Óï³É¼¨£º";
+	cout << "è‹±è¯­æˆç»©ï¼š";
 	cin >> DegEnglish;
 	Sum = DegChinese + DegMaths + DegEnglish;
 }
@@ -88,8 +88,8 @@ float CStudent::Average()
 void CStatistic::Average()
 {
 	/*
-	* @brief ¼ÇÂ¼Ã¿Ò»¿ÆµÄ×Ü·Ö
-	* @param 0ÊÇÓïÎÄ£¬1ÊÇÊıÑ§£¬2ÊÇÓ¢Óï 3ÊÇÆ½¾ù·Ö
+	* @brief è®°å½•æ¯ä¸€ç§‘çš„æ€»åˆ†
+	* @param 0æ˜¯è¯­æ–‡ï¼Œ1æ˜¯æ•°å­¦ï¼Œ2æ˜¯è‹±è¯­ 3æ˜¯å¹³å‡åˆ†
 	*/
 	float Sum[NUMBER];
 	memset(Sum, 0, sizeof(Sum));
@@ -122,13 +122,13 @@ void CStatistic::Sort()
 
 void CStatistic::Display()
 {
-	cout << setw(15) << "Ñ§ºÅ" << "\t" << setw(10) <<"ĞÕÃû" << "\t"
-		<< "ÓïÎÄ\tÊıÑ§\tÓ¢Óï\tÆ½¾ù·Ö\tÃû´Î" << endl;
+	cout << setw(15) << "å­¦å·" << "\t" << setw(10) <<"å§“å" << "\t"
+		<< "è¯­æ–‡\tæ•°å­¦\tè‹±è¯­\tå¹³å‡åˆ†\tåæ¬¡" << endl;
 	for (int i=0; i < Nums; i++) {
 		StuArray[i].Display();
 		cout << "\t" << StuArray[i].getdata(3) << endl;
 	}
-	cout << setw(15)<<"×ÜÆÀ";
+	cout << setw(15)<<"æ€»è¯„";
 	cout<< "\t" <<setw(10)<<"\t"<< AveChinese << "\t"
 		<< AveMaths << "\t" << AveEnglish << "\t" << AveAve << endl;
 }
