@@ -14,7 +14,7 @@ typedef struct Node{
 }*LinkList,Node;
 /*
 * @brief 初始化线性链表
-* @param head 线性链表的头指针
+* @param head 线性链表的头指针(指向头结点)
 */
 void InitLinkList(LinkList *head){
 	ElemType data_t;
@@ -106,16 +106,16 @@ int Delete(LinkList head, int place){
 	return SUCCESS;
 }
 
-int inverse(LinkList *L){
-	LinkList p = (*L)->next; // p is the first element
+int inverse(LinkList L){
+	LinkList p = L->next; // p is the first element
 	Node *t;
-	(*L)->next = NULL;
+	L->next = NULL;
 	while(p){
 		// 头插法
 		t = p;		   // 存取当前元素
 		p = p->next;   // 位移
-		t->next = (*L)->next; // 尾部
-		(*L)->next = t; //头节点指向当前节点
+		t->next = L->next; // 尾部
+		L->next = t; //头节点指向当前节点
 	}
 	return SUCCESS;
 }
@@ -208,7 +208,7 @@ int main(){
 			printf("最近一次删除的数: %d\n", trash);
 			break;
 			case 4:
-			inverse(&h1);
+			inverse(h1);
 			break;
 			case 5:
 			sort(h1);
@@ -228,11 +228,5 @@ int main(){
 			break;
 		}
 	}
-	//insert(h1, 2, 3);
-	//Delete(h1, 3);
-	//inverse(&h1);
-	//sort(h1);
-	// combine_LinkList(h1, h2);
-	// display(h1);
 	return 0;
 }
