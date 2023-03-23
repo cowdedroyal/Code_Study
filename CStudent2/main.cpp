@@ -3,19 +3,19 @@
 int main()
 {
 	int StNum = 0;
-	cout << "ÇëÊäÈëÑ§ÉúµÄÊýÁ¿£º";
+	cout << "è¯·è¾“å…¥å­¦ç”Ÿçš„æ•°é‡ï¼š";
 	cin >> StNum;
 	CStudent *css = new CStudent[StNum];
 	CProcess cpr;
-	cout << "ÓÑÔªº¯ÊýÊä³ö·½Ê½£º" << endl;
-	cout << setw(8) << "ÐÕÃû" << "\t" << "³É¼¨" << "\t" << "µÈ¼¶" << endl;
+	cout << "å‹å…ƒå‡½æ•°è¾“å‡ºæ–¹å¼ï¼š" << endl;
+	cout << setw(8) << "å§“å" << "\t" << "æˆç»©" << "\t" << "ç­‰çº§" << endl;
 	for (int i = 0; i < StNum; i++)
 	{
 		Display(css[i]);
 	}
 	cout << endl;
-	cout << "ÓÑÔªÀàµÄÊä³ö·½Ê½£º" << endl;
-	cout << setw(8) << "ÐÕÃû" << "\t" << "³É¼¨" << "\t" << "µÈ¼¶" << endl;
+	cout << "å‹å…ƒç±»çš„è¾“å‡ºæ–¹å¼ï¼š" << endl;
+	cout << setw(8) << "å§“å" << "\t" << "æˆç»©" << "\t" << "ç­‰çº§" << endl;
 	for (int i = 0; i < StNum; i++)
 	{
 		cpr.Transform(css[i]);

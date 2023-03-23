@@ -2,7 +2,7 @@
 
 CStudent::CStudent()
 {
-	cout<< "ÇëÊäÈëÑ§ÉúµÄÐÕÃûºÍ³É¼¨£º";
+	cout<< "è¯·è¾“å…¥å­¦ç”Ÿçš„å§“åå’Œæˆç»©ï¼š";
 	cin >> Name >> score;
 }
 
@@ -10,28 +10,28 @@ void Display(CStudent& cs)
 {
 	string rank;
 	if (cs.score >= 90)
-		rank = "ÓÅÐã";
+		rank = "ä¼˜ç§€";
 	else if (cs.score >= 80 && cs.score <= 89)
-		rank = "Á¼ºÃ";
+		rank = "è‰¯å¥½";
 	else if (cs.score >= 70 && cs.score <= 79)
-		rank = "ÖÐµÈ";
+		rank = "ä¸­ç­‰";
 	else if (cs.score >= 60 && cs.score <= 69)
-		rank = "¼°¸ñ";
-	else rank = "²»¼°¸ñ";
+		rank = "åŠæ ¼";
+	else rank = "ä¸åŠæ ¼";
 	cout << setw(8) << cs.Name << "\t" << cs.score << "\t" << rank << endl;
 }
 
 void CProcess::Transform(CStudent& cs)
 {
 	if (cs.score >= 90)
-		cs.level = "ÓÅÐã";
+		cs.level = "ä¼˜ç§€";
 	else if (cs.score >= 80 && cs.score <= 89)
-		cs.level = "Á¼ºÃ";
+		cs.level = "è‰¯å¥½";
 	else if (cs.score >= 70 && cs.score <= 79)
-		cs.level = "ÖÐµÈ";
+		cs.level = "ä¸­ç­‰";
 	else if (cs.score >= 60 && cs.score <= 69)
-		cs.level = "¼°¸ñ";
-	else cs.level = "²»¼°¸ñ";
+		cs.level = "åŠæ ¼";
+	else cs.level = "ä¸åŠæ ¼";
 }
 
 void CProcess::Display(CStudent& cs)
